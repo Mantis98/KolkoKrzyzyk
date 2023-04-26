@@ -12,8 +12,8 @@ public class Program implements ActionListener {
     JTextField textField;
 
     Font font = new Font("Serif", Font.BOLD, 50);
-    char kolko = 'O';
-    char krzyzyk = 'X';
+    char ring = 'O';
+    char cross = 'X';
     boolean playerX_Turn = true;
 
     public Program() {
@@ -89,14 +89,14 @@ public class Program implements ActionListener {
             if (e.getSource() == buttons[i]) {
                 if (playerX_Turn) {
                     if (buttons[i].getText() == "") {
-                        buttons[i].setText(String.valueOf(krzyzyk));
+                        buttons[i].setText(String.valueOf(cross));
                         playerX_Turn = false;
                         textField.setText("Player O turn");
                         checkWinner();
                     }
                 } else {
                     if (buttons[i].getText() == "") {
-                        buttons[i].setText(String.valueOf(kolko));
+                        buttons[i].setText(String.valueOf(ring));
                         playerX_Turn = true;
                         textField.setText("Player X turn");
                         checkWinner();
